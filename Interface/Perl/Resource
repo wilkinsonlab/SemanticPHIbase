@@ -1,26 +1,22 @@
-#!/usr/bin/perl -w
+#!/usr/local/bin/perl -w
+
 print "Content-Type: application/xml\n\n";
-#print "incoming:\n";
-#foreach my $key(keys %ENV){
-#print "$key = $ENV{$key}\n<br/>";
-#}
 
 my $URL = "http://" . $ENV{HTTP_HOST} . $ENV{REQUEST_URI};
-#my $URL = "http://mark.cbgp.upm.es/SemanticPHI/Resource/experimentalhost/EXPHOST_0000001929";
+
 use RDF::Query::Client;
  
  my $query = RDF::Query::Client
                ->new('DESCRIBE <'.$URL.'>');
  
- my $iterator = $query->execute('http://mark.cbgp.upm.es:8890/sparql');
+my $iterator = $query->execute('http://linkeddata.systems:8890/sparql');
 
 my $xml = $iterator->as_xml;
  
 print '<?xml version="1.0" encoding="UTF-8" ?>'."\n";
-print '<?xml-stylesheet type="text/xsl" href="http://mark.cbgp.upm.es/styles/phi.xsl" ?>'."\n";
+print '<?xml-stylesheet type="text/xsl" href="http://linkeddata.systems/styles/phi.xsl" ?>'."\n";
 
 $xml =~ s/\<\?xml.*\>\n//;
 print $xml;
-
 
 
