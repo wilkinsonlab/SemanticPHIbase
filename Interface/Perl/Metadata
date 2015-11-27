@@ -65,7 +65,7 @@ sub MetaContainer {
    'dcat:language' => 'http://id.loc.gov/vocabulary/iso639-1/en',
    'dc:language' => 'http://lexvo.org/id/iso639-3/eng', 
    'dcat:publisher' => 'http://wilkinsonlab.info',
-   'dcat:theme'  => 'http://linkeddata.systems/ConceptSchemes/semantic_phi_concept_scheme.rdf',  # this is the URI to a SKOS Concept Scheme
+   'dcat:theme'  => 'http://linkeddata.systems/ConceptSchemes/semanticphi_concept_scheme.rdf',  # this is the URI to a SKOS Concept Scheme
   'daml:has-Technical-Lead' => ["Dr. Alejandro Rodriguez Gonzalez","Alejandro Rodriguez Iglesias"],
   'daml:has-Principle-Investigator' => ["Dr. Mark Wilkinson","Dr. Kim Hammond-Kosack"],
   'dc:creator' => 'http://www.phi-base.org/',
