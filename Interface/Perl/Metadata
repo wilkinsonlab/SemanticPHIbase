@@ -1,0 +1,187 @@
+#!/usr/local/bin/perl -w
+
+package Metadata;  # this should be the same as your filename!
+
+use strict;
+use warnings;
+use JSON;
+
+
+#-----------------------------------------------------------------
+# Configuration and Daemon
+#-----------------------------------------------------------------
+
+use base 'FAIR::Accessor';
+
+my $config = {
+   title => 'Semantic PHI Base Metadata Server',
+   serviceTextualDescription => 'Provides a mechanical landing page for the Semantic PHI Base (Plant Division), repository-level metadata, and access points to individual records, following the W3C Linked Data Platform specification',
+   textualAccessibilityInfo => "The information from this server requries no authentication; HTTP GET is sufficient",  # this could also be a $URI describing the accessibiltiy
+   mechanizedAccessibilityInfo => "",  # this must be a URI to an RDF document
+   textualLicenseInfo => "CC-BY 3.0",  # this could also be a URI to the license info
+   mechanizedLicenseInfo =>  "https://creativecommons.org/licenses/by/3.0/", # this must be a URI to an RDF document
+   baseURI => "", # I don't know what this is used for yet, but I have a feeling I will need it!
+   ETAG_Base => "TopLevelMetadata_Accessor_For_SemanticPHIBase", # this is a unique identificaiton string for the service (required by the LDP specification)
+   localNamespaces => {
+	phi => 'http://linkeddata.systems/SemanticPHIBase/Resource#', 
+	},  # add a few new namespaces to the list of known namespaces....
+   localMetadataElements => [qw(hw:Greeting hw2:grusse) ],  # things that we use in addition to common metadata elements
+   basePATH => 'SemanticPHIBase/Metadata', # REQUIRED regexp to match the RESTful PATH part of the URL, before the ID number
+
+};
+
+my $service = Metadata->new(%$config);
+
+# start daemon
+$service->handle_requests;
+
+
+#-----------------------------------------------------------------
+# Accessor Implementation
+#-----------------------------------------------------------------
+
+sub MetaContainer {
+
+   my ($self, %ARGS) = @_;
+   my $PATH = $ARGS{'PATH'} || "";  # if there was a specific path sent after the script URL, it will be here
+
+   # this is how you would manage "RESTful" references to different subsets of your data repository
+   #if ($PATH =~ /DataSliceX/) {
+   #    # some behavior for Data Slice X
+   #} elsif ($PATH =~ /DataSliceY/) {
+   #    # some behavior for Data Slice Y
+   #}
+
+
+ 
+   my %result =  (  
+   'dc:title' => "Semantic PHI Base Accessor",
+   'dcat:description' => "FAIR Accessor server for the Semantic PHI Base.  This server exposes the plant portion of the Pathogen Host Interaction database as Linked Data, following the FAIR Data Principles. This interface (the one you are reading) follows the W3C Linked Data Platform behaviors.   The data provided here is an RDF transformation of data kindly provided by the researchers at PHI Base (doi:10.1093/nar/gku1165)",
+   'dcat:identifier' => "http://linkeddata.systems/SemanticPHI/Metadata",
+   'dcat:keyword' => ["pathogenesis", "plant/pathogen interactions", "PHI Base", "semantic web", "linked data", "FAIR Data"],
+   'dcat:landingPage' => 'http://www.phi-base.org/',
+   'foaf:page' => 'http://linkeddata.systems:8890/sparql',
+   'foaf:page' => 'http://www.phi-base.org/',
+   'dcat:language' => 'http://id.loc.gov/vocabulary/iso639-1/en',
+   'dc:language' => 'http://lexvo.org/id/iso639-3/eng', 
+   'dcat:publisher' => 'http://wilkinsonlab.info',
+   'dcat:theme'  => 'http://linkeddata.systems/ConceptSchemes/semanticphi_concept_scheme.rdf',  # this is the URI to a SKOS Concept Scheme
+  'daml:has-Technical-Lead' => ["Dr. Alejandro Rodriguez Gonzalez","Alejandro Rodriguez Iglesias"],
+  'daml:has-Principle-Investigator' => ["Dr. Mark Wilkinson","Dr. Kim Hammond-Kosack"],
+  'dc:creator' => 'http://www.phi-base.org/',
+  'pav:authoredBy' => ['http://orcid.org/0000-0002-9699-485X','http://orcid.org/0000-0002-6019-7306'],
+  'dcat:contactPoint' => 'http://biordf.org/DataFairPort/MiscRDF/Wilkinson.rdf',
+  'dcat:license' => 'http://purl.org/NET/rdflicense/cc-by-nc-nd3.0',
+  'dc:issued' => "2015-11-17", 
+  'rdf:type' => 'prov:Collection',
+  'rdf:type' => 'dctypes:Dataset',
+
+   );
+   my $BASE_URL = "http://" . $ENV{'SERVER_NAME'} . $ENV{'REQUEST_URI'};
+
+  # you may chose to return no record IDs at all, if you only want to serve repository-level metadata
+
+	use RDF::Query::Client;
+	my $query = RDF::Query::Client
+       ->new('SELECT DISTINCT ?s WHERE { ?s a <http://linkeddata.systems/SemanticPHIBase/Resource/PHIBO_00022>  }');
+ 
+	my $iterator = $query->execute('http://linkeddata.systems:8890/sparql/');
+	my @known_records;
+	 while (my $row = $iterator->next) {
+	    my $URL = $row->{s}->as_string;
+	    $URL =~ m'/(INT_\d+)';
+	    my $ID = $1;
+	    push @known_records, "$BASE_URL/$ID"
+	 }
+
+   $result{'void:entities'} = scalar(@known_records);  #  THE TOTAL *NUMBER* OF RECORDS THAT CAN BE SERVED
+   $result{'ldp:contains'} = \@known_records; # the listref of record ids
+
+   return encode_json(\%result);
+
+}
+
+
+sub Distributions {
+   my ($self, %ARGS) = @_;
+
+   my $PATH = $ARGS{'PATH'};
+   my $ID = $ARGS{'ID'};
+
+   my %response;
+   my %formats;
+   my %metadata;
+
+   # this is how you would manage "RESTful" references to different subsets of your data repository
+   #if ($PATH =~ /DataSliceX/) {
+   #    # some behavior for Data Slice X
+   #} elsif ($PATH =~ /DataSliceY/) {
+   #    # some behavior for Data Slice Y
+   #}
+
+my $query = "PREFIX sio: <http://semanticscience.org/resource/>
+        PREFIX phi: <http://linkeddata.systems/SemanticPHIBase/Resource/interaction/>
+        PREFIX edam: <http://edamontology.org/>
+        PREFIX eunis: <http://eunis.eea.europa.eu/rdf/species-schema.rdf#>
+        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+        SELECT ?val
+        WHERE {
+               	phi:$ID <http://linkeddata.systems/SemanticPHIBase/Resource#has_unique_identifier> ?o .
+                ?o <http://linkeddata.systems/SemanticPHIBase/Resource#has_value> ?val  }";
+
+
+	use RDF::Query::Client;
+	$query = RDF::Query::Client->new($query);
+	my $iterator = $query->execute('http://linkeddata.systems:8890/sparql/');
+	my $row = $iterator->next; 
+	my $accnumber = $row->{val}->literal_value;
+
+   $formats{'text/html'} = "http://www.phi-base.org/query.php?detail=yes&phi_acc=$accnumber";
+   $formats{'application/rdf+xml'} = "http://linkeddata.systems/SemanticPHIBase/Resource/interaction/$ID";
+
+   # set the ontological type for the record  (optional)
+   $metadata{'rdf:type'} = ['phi:PHIBO_00022'];
+
+   # and whatever other metadata you wish (also optional)
+
+   my $metadata	= $self->getDistributionMetadata($accnumber);
+
+   $response{distributions} = \%formats;
+   $response{metadata} = $metadata if (keys %$metadata);  # only set it if you can provided something
+
+   my $response  = encode_json(\%response);
+
+   return $response;
+
+}
+
+
+sub getDistributionMetadata {
+  my ($self, $ID) = @_;
+  my %metadata = (
+        'dcat:description' => "RDF representation of PHI Base Interaction Record PHI:$ID",
+        'dc:title' => "PHI-Base Interaction PHI:$ID",
+        'dcat:modified' => "2015-11-17", 
+        'dc:issued' => "2015-11-17", 
+        'dcat:identifier' => "http://linkeddata.systems/SemanticPHI/Metadata",
+        'dcat:keyword' => ["pathogenesis", "host/pathogen interaction", "PHI Base"],
+        'dcat:landingPage' => ['http://www.phi-base.org/'],
+        'dcat:language' => 'http://id.loc.gov/vocabulary/iso639-1/en',
+        'dcat:publisher' => 'http://wilkinsonlab.info',
+        'daml:has-Technical-Lead' => ["Dr. Alejandro Rodriguez Gonzalez", "Alejandro Rodriguez Iglesias"],
+        'daml:has-Principle-Investigator' => ["Dr. Mark Wilkinson","Dr. Kim Hammond-Kosack"],
+        'dcat:contactPoint' => 'http://biordf.org/DataFairPort/MiscRDF/Wilkinson.rdf',
+        'dcat:license' => 'http://purl.org/NET/rdflicense/cc-by-nc-nd3.0',
+        'void:inDataset' => 'http://linkeddata.systems/SemanticPHIBase/Metadata',
+	'dc:creator' => 'http://www.phi-base.org/',
+  	'pav:authoredBy' => ['http://orcid.org/0000-0002-9699-485X', 'http://orcid.org/0000-0002-6019-7306'],
+	);
+ return \%metadata;
+}
+
+
+
+
+
+
