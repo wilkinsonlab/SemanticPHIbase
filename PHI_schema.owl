@@ -1,0 +1,1298 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY edamontology "http://edamontology.org/" >
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY efo "http://www.ebi.ac.uk/efo/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY resource "http://semanticscience.org/resource/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+    <!ENTITY Resource "http://linkeddata.systems/SemanticPHIBase/Resource#" >
+    <!ENTITY Resource2 "http://linkeddata.systems/SemanticPHIBase/Resource/" >
+    <!ENTITY SemanticPHIBase "http://linkeddata.systems/ontologies/SemanticPHIBase#" >
+    <!ENTITY ESO "http://linkeddata.systems/SemanticPHIBase/Resource/ESO/" >
+    <!ENTITY POO "http://linkeddata.systems/SemanticPHIBase/Resource/POO/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:ESO="&Resource2;ESO/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:Resource="http://linkeddata.systems/SemanticPHIBase/Resource#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:edamontology="http://edamontology.org/"
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
+     xmlns:POO="&Resource2;POO/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:Resource2="http://linkeddata.systems/SemanticPHIBase/Resource/"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:SemanticPHIBase="http://linkeddata.systems/ontologies/SemanticPHIBase#">
+    <Ontology rdf:about="http://linkeddata.systems/SemanticPHIBase/Resource">
+        <imports rdf:resource="http://edamontology.org"/>
+        <imports rdf:resource="&obo;ro/releases/2015-10-29/ro.owl"/>
+        <imports rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <imports rdf:resource="&efo;efo.owl"/>
+        <imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <AnnotationProperty rdf:about="&terms;hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <AnnotationProperty rdf:about="&terms;publisher"/>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/definition -->
+
+    <AnnotationProperty rdf:about="&efo;definition"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <AnnotationProperty rdf:about="&oboInOwl;id"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PPIO_00000000000000000005 -->
+
+    <ObjectProperty rdf:about="&Resource2;PPIO_00000000000000000005">
+        <rdfs:label>of_species</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000050"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#affects -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;affects">
+        <rdfs:label xml:lang="en">affects</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_001158"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#depends_on -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;depends_on">
+        <rdfs:label xml:lang="en">depends_on</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002502"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#has_member -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;has_member">
+        <rdfs:label xml:lang="en">has_member</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0002351"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#has_output -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;has_output">
+        <rdfs:label xml:lang="en">has_output</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000229"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#has_participant -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;has_participant">
+        <rdfs:label xml:lang="en">has_participant</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000057"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#has_proper_part -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;has_proper_part">
+        <rdfs:label xml:lang="en">has_proper_part</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000053"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#has_quality -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;has_quality">
+        <rdfs:label xml:lang="en">has_quality</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;OBI_0000298"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#has_unique_identifier -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;has_unique_identifier">
+        <rdfs:label xml:lang="en">has_unique_identifier</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000673"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#is_attribute_of -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;is_attribute_of">
+        <rdfs:label xml:lang="en">is_attribute_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000011"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#is_described_by -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;is_described_by">
+        <rdfs:label xml:lang="en">is_described_by</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000557"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#is_manifestation_of -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;is_manifestation_of">
+        <rdfs:label xml:lang="en">is_manifestation_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000426"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#is_manifested_as -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;is_manifested_as">
+        <rdfs:label xml:lang="en">is_manifested_as</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000341"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#is_member_of -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;is_member_of">
+        <rdfs:label xml:lang="en">is_member_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000095"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#is_output_of -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;is_output_of">
+        <rdfs:label xml:lang="en">is_output_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000232"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#is_proper_part_of -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;is_proper_part_of">
+        <rdfs:label xml:lang="en">is_proper_part_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000093"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#is_unique_identifier_for -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;is_unique_identifier_for">
+        <rdfs:label xml:lang="en">is_unique_identifier_for</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000674"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#is_variant_of -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;is_variant_of">
+        <rdfs:label xml:lang="en">is_variant_of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000272"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#participates_in -->
+
+    <ObjectProperty rdf:about="&SemanticPHIBase;participates_in">
+        <rdfs:label xml:lang="en">participates_in</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&obo;RO_0000056"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#has_value -->
+
+    <DatatypeProperty rdf:about="&SemanticPHIBase;has_value">
+        <rdfs:label xml:lang="en">has_value</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&resource;SIO_000300"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://edamontology.org/data_1176 -->
+
+    <Class rdf:about="&edamontology;data_1176">
+        <rdfs:label>GO_annotation</rdfs:label>
+        <terms:description>PHI-tag description: list of all appropriate GO terms with their corresponding evidence codes and / or EC numbers (GO terms separate from evidence code by comma, GO terms separate from GO terms or EC numbers by semicolon).
+</terms:description>
+    </Class>
+    
+
+
+    <!-- http://edamontology.org/data_1893 -->
+
+    <Class rdf:about="&edamontology;data_1893">
+        <rdfs:label>locus_id</rdfs:label>
+        <terms:description>PHI-tag description: obtained from genomic sequence
+</terms:description>
+    </Class>
+    
+
+
+    <!-- http://edamontology.org/data_2044 -->
+
+    <Class rdf:about="&edamontology;data_2044">
+        <rdfs:label>sequence</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://edamontology.org/data_2299 -->
+
+    <Class rdf:about="&edamontology;data_2299">
+        <rdfs:label>gene_name</rdfs:label>
+        <terms:description>PHI-tag description: if there are synonyms, write them in brackets like “CaHK1(CHK1)”.
+</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PHIBO_00003 -->
+
+    <Class rdf:about="&Resource2;PHIBO_00003">
+        <rdfs:label>host_target</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PHIBO_00073 -->
+
+    <Class rdf:about="&Resource2;PHIBO_00073">
+        <rdfs:label>context</rdfs:label>
+        <terms:description>Created to contain all the biological data provided by PHI-base of both pathogens and hosts organisms.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PHIBO_00077 -->
+
+    <Class rdf:about="&Resource2;PHIBO_00077">
+        <rdfs:label>protocol</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00000 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00000">
+        <rdfs:label>experimental_host</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;SIO_010415"/>
+        <terms:description>PHI-tag description: common name of experimental host.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00001 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00001">
+        <rdfs:label>disease_name</rdfs:label>
+        <terms:description>PHI-tag description: common name of disease.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00002 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00002">
+        <rdfs:label>host_response</rdfs:label>
+        <terms:description>PHI-tag description: details any difference in the host defence response to a pathogen with a disrupted gene.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00004 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00004">
+        <rdfs:label>function</rdfs:label>
+        <terms:description>PHI-tag description: function of the disrupted gene.
+
+</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00013 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00013">
+        <rdfs:label>essential_gene_lethal_knockout</rdfs:label>
+        <terms:description>PHI-tag description: lethal effect from gene disruption.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00017 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00017">
+        <rdfs:label>associated_strain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&resource;SIO_010055"/>
+        <terms:description>PHI-tag description: strain, isolate, subspecies etc., of organism used for the submission of the gene/protein sequence. This field is the only field also experimentally annotated by automatic extraction
+</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00018 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00018">
+        <rdfs:label>in_vitro_growth</rdfs:label>
+        <terms:description>PHI-tag description: Growth defects in culture caused by the gene disruption e.g. reduced growth.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00022 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00022">
+        <rdfs:label>interaction</rdfs:label>
+        <terms:description>It is composed of three components: plant pathogenic entity, host plant and gene involved.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00024 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00024">
+        <rdfs:label>gene_mutation_parameter</rdfs:label>
+        <terms:description>Created to contain the data around the gene mutation phenomena (experimental procedure, phenotype of the generated mutant, etc).</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00074 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00074">
+        <rdfs:label>host_context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Resource2;PHIBO_00073"/>
+        <terms:description>Created to contain the specific information provided by PHI-base about the host organisms.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00075 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00075">
+        <rdfs:label>pathogen_context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Resource2;PHIBO_00073"/>
+        <terms:description>Created to contain the specific information provided by PHI-base  about the pathogenic organisms (gene/allele data, NCBI taxonomy data, etc).</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00076 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00076">
+        <rdfs:label>interaction context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&Resource2;PHIBO_00073"/>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase#PHIBO_00111 -->
+
+    <Class rdf:about="&SemanticPHIBase;PHIBO_00111">
+        <rdfs:label>phi_base_accession</rdfs:label>
+        <terms:description>PHI-tag description: stable accession number for each database entry to aid curation.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000">
+        <rdfs:label>experiment_specification</rdfs:label>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000000</oboInOwl:id>
+        <rdfs:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000001 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000001">
+        <rdfs:label>gene_disruption</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000001</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The ORF or intergenic sequences within the gene was disrupted due to transposon insertion or by the insertion of a resistance gene cassette.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000002 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000002">
+        <rdfs:label>gene_deletion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000002</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000003 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000003">
+        <rdfs:label>gene_mutation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000003</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000004 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000004">
+        <rdfs:label>altered_gene_expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000004</oboInOwl:id>
+        <rdfs:comment>Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000005 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000005">
+        <rdfs:label>biochemical_analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000005</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000006 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000006">
+        <rdfs:label>functional_test_in_host_organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000006</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The function of the gene was investigated by applying the protein to the host using a biological delivery system (i.e. expression of a stable transgene from the host, transient delivery with a virus, or transient delivery with Agrobacterium).</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000007 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000007">
+        <rdfs:label>gene_complementation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000007</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The mutant phenotype was restored to wild-type by introducing a copy of the wild-type gene.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000008 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000008">
+        <rdfs:label rdf:datatype="&xsd;string">sequence_analysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000008</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000009 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000009">
+        <rdfs:label>sexual_cross</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000009</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000010 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000010">
+        <rdfs:label>other_evidence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000010</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000011 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000011">
+        <rdfs:label>gene_overexpression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000004"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000011</oboInOwl:id>
+        <efo:definition rdf:datatype="&xsd;string">Gene expression was altered by changing the promoter/regulatory sequences. Gene expression is increased as a consequence.</efo:definition>
+        <rdfs:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000012 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000012">
+        <rdfs:label>gene_downregulation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000004"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000012</oboInOwl:id>
+        <efo:definition rdf:datatype="&xsd;string">Gene expression was altered by changing the promoter/regulatory sequences. Gene expression is reduced as a consequence.</efo:definition>
+        <rdfs:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000013 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000013">
+        <rdfs:label>gene_silencing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000004"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000013</oboInOwl:id>
+        <efo:definition rdf:datatype="&xsd;string">Gene expression is reduced by gene silencing using an RNAi approach.</efo:definition>
+        <rdfs:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000014 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000014">
+        <rdfs:label>direct_injection_into_host_organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000006"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000014</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The protein was injected into the host using a device (i.e. syringe needle).</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000015 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000015">
+        <rdfs:label>transient_expression_into_host_organism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000006"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000015</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The protein was transiently expressed in the host.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000016 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000016">
+        <rdfs:label>characterised_gene_mutation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000003"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000016</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The UV or chemical gene mutation was characterised by sequencing or biochemistry.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000017 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000017">
+        <rdfs:label>sequence_analysis_of_sensitive_and_resistant_strains</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000008"/>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000017"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000017</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">Sequence information of both strains were analysed to infer the gene function.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000018 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000018">
+        <rdfs:label>sequencing_of_resistance_conferring_allele</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000009"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000018</oboInOwl:id>
+        <efo:definition rdf:datatype="&xsd;string">Mendelian crossing was used to delineate the function of an allele.</efo:definition>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000019 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000019">
+        <rdfs:label>uncharacterised_gene_mutation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000003"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000019</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The gene was mutated using radiation (UV) or a chemical agent. The mutation itself is unknown.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000020 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000020">
+        <rdfs:label>full_gene_deletion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000002"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000020</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The entire gene was replaced with a resistance gene cassette.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000021 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000021">
+        <rdfs:label>partial_gene_deletion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000002"/>
+        <efo:definition rdf:datatype="&xsd;string">A part of the gene was replaced with a resistance gene cassette.</efo:definition>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000021</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000022 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000022">
+        <rdfs:label>promoter_mutation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000022</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">Putative promoter region upstream of a gene was disrupted due to transposon insertion or by the insertion of a resistance gene cassette.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000023 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000023">
+        <rdfs:label>cluster_deletion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <efo:definition rdf:datatype="&xsd;string">A small chromosomal region containing more than one gene was replaced using a resistance gene cassette.</efo:definition>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000023</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000024 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000024">
+        <rdfs:label>unknown_gene_expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000004"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000024</oboInOwl:id>
+        <efo:definition rdf:datatype="&xsd;string">Gene expression was altered by changing the promoter/regulatory sequences. It is not reported if the gene is down- or up-regulated as a consequence.</efo:definition>
+        <rdfs:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000025 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000025">
+        <rdfs:label>heterelogous_expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000025</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000026 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000026">
+        <rdfs:label>chemical_complementation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">ESO:0000026</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000">
+        <rdfs:label>phenotype_outcome</rdfs:label>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000000</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <terms:description>It is the description of the different phenotypes observed after the mutagenesis of the gene/s of interest.</terms:description>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000001 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000001">
+        <rdfs:label>loss_of_pathogenicity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000001</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The transgenic strain fails to cause disease that is observed in the wild type (i.e. qualitative effect).</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000002 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000002">
+        <rdfs:label>reduced_virulence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000002</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The transgenic strain still causes some disease formation but fewer symptoms than the wild-type strain (i.e. a quantitative effect).</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000003 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000003">
+        <rdfs:label>unaffected_pathogenicity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000003</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The transgenic strain which expresses altered levels of a specific gene product(s) causes the same level of disease compared to the wild-type reference strain.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000004 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000004">
+        <rdfs:label>phi_base_accession</rdfs:label>
+        <rdfs:label>increased_virulence_(hypervirulence)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000004</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The transgenic strain causes greater incidence or severity of disease than the wild-type strain.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000005 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000005">
+        <rdfs:label>effector_(plant_avirulence_determinant)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000005</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">Some effector genes are required to cause disease on susceptible hosts but most are not. A plant pathogen-specific term which was previously referred to as a corresponding avirulence (Avr) gene. An effector gene is formally identified because its presence leads to the direct or indirect recognition of a pathogen in resistant host genotypes which possess the corresponding disease resistance (R) gene. Positive recognition leads to activation of plant defense and the pathogen either fails to cause disease or causes less disease. In the absence of the pathogen, effector delivery into a healthy plant possessing the corresponding R gene activates plant defense responses.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000006 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000006">
+        <rdfs:label>lethal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000006</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The transgenic strain is not viable. The gene product is essential for life of the organism.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000007 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000007">
+        <rdfs:label>enhanced_antagonism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000007</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The transgenic strain shows greater endophytic biomass in the host and/or the formation of visible disease symptoms.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000008 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000008">
+        <rdfs:label>resistant_to_chemical</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <resource:comment rdf:datatype="&xsd;string">Molecular studies on natural field isolate population are also considered, once the natural target site has been identified.</resource:comment>
+        <oboInOwl:id rdf:datatype="&xsd;string">PO:0000008</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The transgenic strain grows and/or develops normally when exposed to chemistry concentrations that are detrimental to the wild-type strain.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000009 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000009">
+        <rdfs:label>sensitive_to_chemical</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <resource:comment rdf:datatype="&xsd;string">On rare occasions increased sensitivity to chemistry has been observed.</resource:comment>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000009</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+        <efo:definition rdf:datatype="&xsd;string">The transgenic strain which expresses either no or reduced levels of a specific gene product(s) or possesses a specific gene mutation(s), has the same ability as the wild-type strain to grow and develop when exposed to detrimental chemistry concentrations.</efo:definition>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000010 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000010">
+        <rdfs:label>mixed_outcome</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <efo:definition rdf:datatype="&xsd;string">A range of phenotype outcomes have been observed.</efo:definition>
+        <oboInOwl:id rdf:datatype="&xsd;string">POO:0000010</oboInOwl:id>
+        <resource:comment rdf:datatype="&xsd;string">Part of a controlled vocabulary provided by the PHI-base consortium (http://www.phi-base.org/).</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000011 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000011">
+        <rdfs:label>Non-Pathogenic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <resource:comment rdf:datatype="&xsd;string">Created by PHIBO designers to match PHI-base data.</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000012 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000012">
+        <rdfs:label>Virulent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <resource:comment rdf:datatype="&xsd;string">Created by PHIBO designers to match PHI-base data.</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000013 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000013">
+        <rdfs:label>Wild-type_mutualism</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <resource:comment rdf:datatype="&xsd;string">Created by PHIBO designers to match PHI-base data.</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000014 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000014">
+        <rdfs:label>chemistry_target</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <resource:comment rdf:datatype="&xsd;string">Created by PHIBO designers to match PHI-base data.</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000015 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000015">
+        <rdfs:label>essential</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+        <resource:comment rdf:datatype="&xsd;string">Created by PHIBO designers to match PHI-base data.</resource:comment>
+    </Class>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000016 -->
+
+    <Class rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000016">
+        <rdfs:label>base state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_0000000"/>
+    </Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010035 -->
+
+    <Class rdf:about="&resource;SIO_010035">
+        <rdfs:label>gene</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_010055 -->
+
+    <rdf:Description rdf:about="&resource;SIO_010055">
+        <terms:description>PHI-tag description: strain, isolate, subspecies etc. of organism used in the experiment.
+</terms:description>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PPIO_00000000000000000002 -->
+
+    <NamedIndividual rdf:about="&Resource2;PPIO_00000000000000000002">
+        <rdf:type rdf:resource="&resource;SIO_010414"/>
+        <rdf:type rdf:resource="&efo;EFO_0000643"/>
+        <rdfs:label>PATH_00001</rdfs:label>
+        <Resource2:PPIO_00000000000000000005 rdf:resource="&Resource2;PPIO_00000000000000000004"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PPIO_00000000000000000003 -->
+
+    <NamedIndividual rdf:about="&Resource2;PPIO_00000000000000000003">
+        <rdf:type rdf:resource="&resource;SIO_010415"/>
+        <rdf:type rdf:resource="&efo;EFO_0000532"/>
+        <rdfs:label>HOST_00001</rdfs:label>
+        <Resource2:PPIO_00000000000000000005 rdf:resource="&Resource2;PPIO_00000000000000000004"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PPIO_00000000000000000004 -->
+
+    <NamedIndividual rdf:about="&Resource2;PPIO_00000000000000000004">
+        <rdf:type rdf:resource="&edamontology;data_1179"/>
+        <rdfs:label>ORG_00001</rdfs:label>
+        <resource:SIO_000300 rdf:datatype="&xsd;integer">56576</resource:SIO_000300>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PPIO_00000000000000000011 -->
+
+    <NamedIndividual rdf:about="&Resource2;PPIO_00000000000000000011">
+        <rdf:type rdf:resource="&resource;SIO_010277"/>
+        <rdfs:label>ALLELE_00001</rdfs:label>
+        <SemanticPHIBase:is_variant_of rdf:resource="&Resource2;PPIO_00000000000000000012"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PPIO_00000000000000000012 -->
+
+    <NamedIndividual rdf:about="&Resource2;PPIO_00000000000000000012">
+        <rdf:type rdf:resource="&obo;SO_0000704"/>
+        <rdf:type rdf:resource="&resource;SIO_010035"/>
+        <rdfs:label>GENE_00001</rdfs:label>
+        <SemanticPHIBase:is_proper_part_of rdf:resource="&Resource2;PPIO_00000000000000000004"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PPIO_00000000000000000018 -->
+
+    <NamedIndividual rdf:about="&Resource2;PPIO_00000000000000000018">
+        <rdf:type rdf:resource="&efo;EFO_0005168"/>
+        <rdfs:label>WTHOST_00002</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linkeddata.systems/SemanticPHIBase/Resource/PPIO_00000000000000000020 -->
+
+    <NamedIndividual rdf:about="&Resource2;PPIO_00000000000000000020">
+        <rdf:type rdf:resource="&efo;EFO_0005168"/>
+        <rdfs:label>WTPATH_00002</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_SCHEMA -->
+
+    <NamedIndividual rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/ESO#ESO_SCHEMA">
+        <rdf:type rdf:resource="&skos;ConceptScheme"/>
+        <rdfs:label>Experiment Specification Ontology</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_SCHEMA -->
+
+    <NamedIndividual rdf:about="http://linkeddata.systems/ontologies/SemanticPHIBase/POO#POO_SCHEMA">
+        <rdf:type rdf:resource="&skos;ConceptScheme"/>
+        <rdfs:label>Phenotype Outcome Ontology</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:modified rdf:datatype="&xsd;date">2012-06-14</terms:modified>
+        <terms:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2012-06-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
