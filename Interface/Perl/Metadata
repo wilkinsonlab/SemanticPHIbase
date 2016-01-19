@@ -58,20 +58,21 @@ sub MetaContainer {
    'dc:title' => "Semantic PHI Base Accessor",
    'dcat:description' => "FAIR Accessor server for the Semantic PHI Base.  This server exposes the plant portion of the Pathogen Host Interaction database as Linked Data, following the FAIR Data Principles. This interface (the one you are reading) follows the W3C Linked Data Platform behaviors.   The data provided here is an RDF transformation of data kindly provided by the researchers at PHI Base (doi:10.1093/nar/gku1165)",
    'dcat:identifier' => "http://linkeddata.systems/SemanticPHI/Metadata",
-   'dcat:keyword' => ["pathogenesis", "plant/pathogen interactions", "PHI Base", "semantic web", "linked data", "FAIR Data"],
+   'dcat:keyword' => ["pathogenesis", "plant/pathogen interactions", "PHI Base", "semantic web", "linked data", "FAIR Data", "genetic database", "phytopathology"],
    'dcat:landingPage' => 'http://www.phi-base.org/',
    'foaf:page' => 'http://linkeddata.systems:8890/sparql',
    'foaf:page' => 'http://www.phi-base.org/',
    'dcat:language' => 'http://id.loc.gov/vocabulary/iso639-1/en',
    'dc:language' => 'http://lexvo.org/id/iso639-3/eng', 
-   'dcat:publisher' => 'http://wilkinsonlab.info',
+   'dcat:publisher' => ['http://wilkinsonlab.info',"Rothamsted Research", ' http://www.rothamsted.ac.uk', 'http://www.phi-base.org'],
    'dcat:theme'  => 'http://linkeddata.systems/ConceptSchemes/semanticphi_concept_scheme.rdf',  # this is the URI to a SKOS Concept Scheme
   'daml:has-Technical-Lead' => ["Dr. Alejandro Rodriguez Gonzalez","Alejandro Rodriguez Iglesias"],
   'daml:has-Principle-Investigator' => ["Dr. Mark Wilkinson","Dr. Kim Hammond-Kosack"],
   'dc:creator' => 'http://www.phi-base.org/',
   'pav:authoredBy' => ['http://orcid.org/0000-0002-9699-485X','http://orcid.org/0000-0002-6019-7306'],
   'dcat:contactPoint' => 'http://biordf.org/DataFairPort/MiscRDF/Wilkinson.rdf',
-  'dcat:license' => 'http://purl.org/NET/rdflicense/cc-by-nc-nd3.0',
+  'dcat:license' => 'http://purl.org/NET/rdflicense/cc-by-nd4.0',
+  'dc:license' => 'http://purl.org/NET/rdflicense/cc-by-nd4.0',
   'dc:issued' => "2015-11-17", 
   'rdf:type' => 'prov:Collection',
   'rdf:type' => 'dctypes:Dataset',
@@ -83,7 +84,14 @@ sub MetaContainer {
 
 	use RDF::Query::Client;
 	my $query = RDF::Query::Client
-       ->new('SELECT DISTINCT ?s WHERE { ?s a <http://linkeddata.systems/SemanticPHIBase/Resource/PHIBO_00022>  }');
+       ->new('
+	PREFIX PHIO: <http://linkeddata.systems/ontologies/SemanticPHIBase#>
+	SELECT DISTINCT ?s
+              FROM <http://linkeddata.systems/SemanticPHIBase/Metadata>
+              WHERE {
+                     ?s a PHIO:PHIBO_00022
+              }'
+	);
  
 	my $iterator = $query->execute('http://linkeddata.systems:8890/sparql/');
 	my @known_records;
