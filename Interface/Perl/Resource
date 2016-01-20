@@ -1,5 +1,4 @@
 #!/usr/local/bin/perl -w
-#use lib '/usr/local/share/perl5/';
 use RDF::Query::Client;
 print "Content-Type: application/xml\n\n";
 
@@ -7,22 +6,26 @@ print "Content-Type: application/xml\n\n";
 my $graph = "http://linkeddata.systems/SemanticPHIBase/Metadata";
 my $URL = "http://" . $ENV{HTTP_HOST} . $ENV{REQUEST_URI};
 
-#$URL = "http://linkeddata.systems/SemanticPHIBase/Resource/gene/GENE_0000000002";
+# example:  $URL = "http://linkeddata.systems/SemanticPHIBase/Resource/gene/GENE_0000000002";
 
+# create the SPARQL DESCRIBE query
 my $qstring = 'DESCRIBE <'.$URL.'> from  <'.$graph.'>';
 
-print STDERR "\n\nQuery:  $qstring\n\n";
-
+# print STDERR "\n\nQuery:  $qstring\n\n";
+# execute the query
 my $query = RDF::Query::Client->new($qstring);
- 
 my $iterator = $query->execute('http://linkeddata.systems:8890/sparql');
-
+# get the query result as RDF-XML
 my $xml = $iterator->as_xml;
- 
+
+# prepare substitute headers, that refer to the stylesheet 
 print '<?xml version="1.0" encoding="UTF-8" ?>'."\n";
 print '<?xml-stylesheet type="text/xsl" href="http://linkeddata.systems/styles/phi.xsl" ?>'."\n";
 
+# replace the headers in the returned XML
 $xml =~ s/\<\?xml.*\>\n//;
+
+# back to the user
 print $xml;
 
 
