@@ -5,7 +5,7 @@ package Metadata;  # this should be the same as your filename!
 use strict;
 use warnings;
 use JSON;
-
+use FAIR::Accessor;
 
 #-----------------------------------------------------------------
 # Configuration and Daemon
@@ -18,9 +18,8 @@ my $config = {
    serviceTextualDescription => 'Provides a mechanical landing page for the Semantic PHI Base (Plant Division), repository-level metadata, and access points to individual records, following the W3C Linked Data Platform specification',
    textualAccessibilityInfo => "The information from this server requries no authentication; HTTP GET is sufficient",  # this could also be a $URI describing the accessibiltiy
    mechanizedAccessibilityInfo => "",  # this must be a URI to an RDF document
-   textualLicenseInfo => "CC-BY 3.0",  # this could also be a URI to the license info
-   mechanizedLicenseInfo =>  "https://creativecommons.org/licenses/by/3.0/", # this must be a URI to an RDF document
-   baseURI => "", # I don't know what this is used for yet, but I have a feeling I will need it!
+   textualLicenseInfo => "CC-BY-ND 4.0",  # this could also be a URI to the license info
+   mechanizedLicenseInfo =>  "http://purl.org/NET/rdflicense/cc-by-nd4.0", # this must be a URI to an RDF document
    ETAG_Base => "TopLevelMetadata_Accessor_For_SemanticPHIBase", # this is a unique identificaiton string for the service (required by the LDP specification)
    localNamespaces => {
 	phi => 'http://linkeddata.systems/SemanticPHIBase/Resource#', 
