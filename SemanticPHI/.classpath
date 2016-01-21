@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/mysql/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/json/commons-codec-1.8.jar"/>
+	<classpathentry kind="lib" path="lib/json/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="lib/json/jackson-annotations-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/json/jackson-core-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/json/jackson-databind-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jena/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/jena/commons-csv-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/jena/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="lib/jena/httpclient-4.2.6.jar"/>
+	<classpathentry kind="lib" path="lib/jena/httpclient-cache-4.2.6.jar"/>
+	<classpathentry kind="lib" path="lib/jena/httpcore-4.2.5.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jackson-annotations-2.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jackson-core-2.3.3.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jackson-databind-2.3.3.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jcl-over-slf4j-1.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jena-arq-2.13.0.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jena-core-2.13.0.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jena-iri-1.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jena-tdb-1.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/jena/jsonld-java-0.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/jena/libthrift-0.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jena/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/jena/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/jena/slf4j-log4j12-1.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/jena/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/jena/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="lib/swt/swt-win64.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

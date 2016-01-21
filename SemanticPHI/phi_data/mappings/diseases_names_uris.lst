@@ -1,0 +1,82 @@
+LEAF SPOT	http://dbpedia.org/resource/Leaf_spot	URI
+LEAF MOLD	http://www.dbpedia.org/resource/Leaf_mold	URI
+CORN SMUT	http://www.dbpedia.org/resource/Corn_smut	URI
+ROOT ROT	http://www.dbpedia.org/resource/Root_rot	URI
+PHYTOPHTHORA BLIGHT IN CUCURBITS AND SOLANACEOUS CROPS	http://www.dbpedia.org/resource/Blight	SEEALSO
+TAKE-ALL	http://www.dbpedia.org/resource/Take-all	URI
+PHOMA STEM CANKER	http://www.dbpedia.org/resource/Canker	SEEALSO
+ANTHRACNOSE	http://www.dbpedia.org/resource/Canker	URI
+HISTOPLASMOSIS (PULMONARY DISEASE)	http://www.dbpedia.org/resource/Histoplasmosis	URI
+SCALD/LEAF BLOTCH	http://www.dbpedia.org/resource/Leaf_blotch	URI
+FUSARIUM EAR BLIGHT	http://www.dbpedia.org/resource/Fusarium_ear_blight	URI
+CHESNUT BLIGHT	http://www.dbpedia.org/resource/Chestnut_blight	URI
+LEAF BLIGHT	http://www.dbpedia.org/resource/Blight	SEEALSO
+VASCULAR WILT	http://www.dbpedia.org/resource/Wilt_disease	SEEALSO
+LEAF SPOT/BLIGHT	http://www.dbpedia.org/resource/Leaf_spot	SEEALSO
+ALTERNARIA LEAF BLOTCH	http://www.dbpedia.org/resource/Leaf_blotch	SEEALSO 	
+FOOLISH SEEDLING	http://www.dbpedia.org/resource/Bakanae	URI
+POTATO ROT	http://www.dbpedia.org/resource/Bacterial_soft_rot	SEEALSO
+MAIZE GREY LEAF SPOT	http://www.dbpedia.org/resource/Corn_grey_leaf_spot	URI
+WHITE MOLD/STEM ROT	http://www.dbpedia.org/resource/Stem_rot	URI
+DOWNY MILDEW	http://www.dbpedia.org/resource/Downy_mildew	URI
+CANDIDIASIS	http://www.dbpedia.org/resource/Candidiasis	URI
+LIGHT LEAF SPOT	http://dbpedia.org/resource/Leaf_spot	SEEALSO
+BARLEY SMUT	http://dbpedia.org/resource/Covered_smut_(barley)	SEEALSO
+HALO BLIGHT	http://dbpedia.org/resource/Halo_blight	URI
+FROG-EYE LEAFSPOT	http://dbpedia.org/resource/Leaf_spot	SEEALSO	
+POWDERY MILDEW	http://dbpedia.org/resource/Powdery_mildew	URI
+APPLE SCAB	http://dbpedia.org/resource/Apple_scab	URI
+LEAF BLOTCH OF BARLEY	http://dbpedia.org/resource/Spot_blotch_(barley)	URI
+ASPERGILLOSIS	http://dbpedia.org/resource/Aspergillosis	URI
+WHEAT POWDERY MILDEW	http://dbpedia.org/resource/Powdery_mildew	SEEALSO
+BACTERIAL BLIGHT	http://dbpedia.org/resource/Blight	SEEALSO
+BROWN SPOT	http://dbpedia.org/resource/Leaf_spot	SEEALSO
+BACTERIAL LEAF SPOT	http://dbpedia.org/resource/Leaf_spot	SEEALSO
+MAIZE LEAF ANTHRACNOSE / STALK ROT	http://dbpedia.org/resource/Canker	SEEALSO
+BARLEY STEM BLIGHT	http://dbpedia.org/resource/Blight	SEEALSO
+MAIZE SMUT DISEASE	http://dbpedia.org/resource/Corn_smut	URI
+MAIZE ANTHRACNOSE	http://dbpedia.org/resource/Canker	SEEALSO
+CITRUS BROWN SPOT	http://dbpedia.org/resource/Leaf_spot	SEEALSO
+FUSARIUM WILT	http://dbpedia.org/resource/Fusarium_wilt	URI
+BROWN SPOT DISEASE	http://dbpedia.org/resource/Leaf_spot	SEEALSO
+VERTICILLIUM WILT	http://dbpedia.org/resource/Verticillium_wilt	URI
+COVERED SMUT	http://dbpedia.org/resource/Common_bunt	URI
+PHYTOPHTHORA BLIGHT	http://dbpedia.org/resource/Blight	SEEALSO 
+FUSARIUM HEAD BLIGHT	http://dbpedia.org/resource/Fusarium_ear_blight	URI
+SOUTHERN CORN LEAF BLIGHT	http://dbpedia.org/resource/Southern_corn_leaf_blight	URI
+BROWN ROT	http://dbpedia.org/resource/Brown_rot	SEEALSO
+BACTERIAL SPOT DISEASE	http://dbpedia.org/resource/Bacterial_leaf_scorch	SEEALSO
+ANTHRACNOSE STALK ROT AND LEAF BLIGHT OF MAIZE	http://dbpedia.org/resource/Canker	SEEALSO
+MENINGOENCEPHALITIS	http://dbpedia.org/resource/Meningoencephalitis	URI
+CITRUS BROWN SPOTS	http://dbpedia.org/resource/Leaf_spot	SEEALSO
+MUSKMELON WILT DISEASE	http://dbpedia.org/resource/Wilt_disease	SEEALSO
+VASCULAR WILT FUNGUS	http://dbpedia.org/resource/Wilt_disease	SEEALSO
+FIRE BLIGHT	http://dbpedia.org/resource/Fire_blight	URI
+BACTERIAL LEAF BLIGHT	http://dbpedia.org/resource/Blight	SEEALSO
+STEWART’S BACTERIAL WILT AND LEAF BLIGHT	http://dbpedia.org/resource/Stewart%27s_Wilt	URI
+CHESTNUT BLIGHT FUNGUS	http://dbpedia.org/resource/Chestnut_blight	URI
+BACTERIAL WILT	http://dbpedia.org/resource/Bacterial_wilt	URI
+SOFT ROT DISEASE	http://dbpedia.org/resource/Soft_rot	SEEALSO
+CITRUS CANKER	http://dbpedia.org/resource/Citrus_canker	URI
+BLACK ROT OF CRUCIFERS	http://dbpedia.org/resource/Black_rot	SEEALSO
+INVASIVE PULMONARY ASPERGILLOSIS	http://dbpedia.org/resource/Aspergillosis	SEEALSO
+CHAGAS DISEASE	http://dbpedia.org/resource/Chagas_disease	URI
+LEAF SPOT DISEASE	http://dbpedia.org/resource/Leaf_spot	URI
+TOMATO WILT	http://dbpedia.org/resource/Wilt_disease	SEEALSO
+HUMAN AFRICAN TRYPANOSOMIASIS	http://dbpedia.org/resource/Trypanosomiasis	URI
+SOYBEAN STEM AND ROOT ROT	http://www.dbpedia.org/resource/Root_rot	SEEALSO
+ROTTING OF TUBERS; BLACKLEG DISEASE OF THE PLANT STEM	http://www.dbpedia.org/resource/Blackleg_(potatoes)	URI
+CUCUMBER ANTHRACNOSE	http://dbpedia.org/resource/Canker	SEEALSO
+CASSAVA BACTERIAL BLIGHT	http://dbpedia.org/resource/Blight	SEEALSO
+BACTERIAL LEAF STREAK	http://dbpedia.org/resource/Bacterial_leaf_streak	URI
+SOFT ROT	http://dbpedia.org/resource/Soft_rot	SEEALSO
+NORTHERN LEAF BLIGHT	http://www.dbpedia.org/resource/Blight	SEEALSO
+DISSEMINATED CANDIDIASIS	http://www.dbpedia.org/resource/Candidiasis	URI
+CITRUS BLACK ROT	http://www.dbpedia.org/resource/Black_rot	SEEALSO
+TOMATO LEAF MOULD	http://www.dbpedia.org/resource/Tomato_leaf_mold	URI
+BEAN BROWN SPOT	http://dbpedia.org/resource/Leaf_spot	SEEALSO
+BLACK ROT DISEASE	http://dbpedia.org/resource/Black_rot	SEEALSO
+STEM CANKER	http://dbpedia.org/resource/Canker	SEEALSO
+ANTHRACNOSE DISEASE	http://dbpedia.org/resource/Canker	SEEALSO
+BARLEY POWDERY MILDEW	http://dbpedia.org/resource/Powdery_mildew	SEEALSO
+TUMORS, GALLS OR KNOTS	http://dbpedia.org/resource/Gall	SEEALSO

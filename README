@@ -1,0 +1,27 @@
+SemanticPHI execution instructions
+
+The project has been developed using Java as language programming under Eclipse IDE. It can be loaded as a project
+from Eclipse.
+
+To run the program it is necessary to execute the Main class which is in the package es.upm.cbgp.semphi.logic
+
+The execution of this class will show a menu with 3 options:
+
+1. Create a dump file from version 3.8 of the XML file
+2. Create a dump file from version 4 of the XML file
+3. Exit
+
+Both options 1 and 2 will create a dump RDF file which will be stored under "ont" folder with
+the name "PHI_populated.owl".
+
+If you look into the source code, an interesting parameter in the execution of the ontology populator (OntologyPopulator class)
+is the second parameter which is received by the constructor:
+
+OntologyPopulator op = new OntologyPopulator(pxe, true);
+
+This second parameter, which by default is set as true is the option to annotate the resulting RDF file with SKOS.
+
+We recommend to swith this option off (change the parameter to false) if you want a quick and light dump generation.
+
+The activation of the SKOS parameter implies that the resulting file will be larger and it will take more time to
+execute the process.

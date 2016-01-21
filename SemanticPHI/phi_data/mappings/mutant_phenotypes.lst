@@ -1,0 +1,21 @@
+phenotype outcome	#POO_0000000
+Loss of pathogenicity	#POO_0000001
+Reduced virulence	#POO_0000002
+reduced virulence	#POO_0000002
+Unaffected pathogenicity	#POO_0000003
+Increased virulence (Hypervirulence)	#POO_0000004
+Increased virulence (hypervirulence)	#POO_0000004
+Increased virulence	#POO_0000004
+Effector (plant avirulence determinant)	#POO_0000005
+Lethal	#POO_0000006
+Enhanced antagonism	#POO_0000007
+Resistant to chemical	#POO_0000008
+Sensitive to chemical	#POO_0000009
+mixed outcome	#POO_0000010
+Non-Pathogenic	#POO_0000011
+Virulent	#POO_0000012
+Wild-type mutualism	#POO_0000013
+chemistry target	#POO_0000014
+essential	#POO_0000015
+BASE STATE	#POO_0000016
+N/A	#POO_0000000

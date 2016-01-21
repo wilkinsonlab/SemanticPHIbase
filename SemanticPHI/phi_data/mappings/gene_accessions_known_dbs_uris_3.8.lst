@@ -1,0 +1,14 @@
+ENTREZ PROTEIN	http://identifiers.org/ena.embl/
+UNIPROT	http://identifiers.org/uniprot/
+PDB	http://identifiers.org/pdb/
+ENTREZ NUCLEOTIDE	http://identifiers.org/insdc/
+GENBANK	http://identifiers.org/insdc/
+NULL	NO_VALUE
+ENTREZ GENE	NO_VALUE
+EMBL	NO_VALUE
+NCBI	NO_VALUE
+BROAD	NO_VALUE
+MUMDB	NO_VALUE
+FCGP	NO_VALUE
+JGI	NO_VALUE
+ATMT	NO_VALUE

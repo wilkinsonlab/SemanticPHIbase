@@ -1,0 +1,31 @@
+experimental specification	#ESO_0000000
+gene disruption	#ESO_0000001
+gene deletion	#ESO_0000002
+gene mutation	#ESO_0000003
+altered gene expression	#ESO_0000004
+biochemical analysis	#ESO_0000005
+functional test in host	#ESO_0000006
+gene complementation	#ESO_0000007
+sequence analysis	#ESO_0000008
+sequence analysis of sensitive and resistant strains	#ESO_0000008
+sexual cross	#ESO_0000009
+other evidence	#ESO_0000010
+altered gene expression / gene regulation: overexpression	#ESO_0000011
+altered gene expression / gene regulation: down- and upregulation	#ESO_0000012
+altered gene expression / gene regulation: silencing	#ESO_0000013
+functional test in host: direct injection	#ESO_0000014
+functional test in host: transient expression	#ESO_0000015
+mutation: characterised	#ESO_0000016
+sequence analysis of sensitive and resistant strains	#ESO_0000008
+sequencing of resistance conferring allele	#ESO_0000018
+uncharacterised gene mutation	#ESO_0000019
+full gene deletion	#ESO_0000020
+partial gene deletion	#ESO_0000021
+promoter mutation	#ESO_0000022
+cluster deletion	#ESO_0000023
+unknown gene expression	#ESO_0000024
+heterologous expression	#ESO_0000025
+chemical complementation	#ESO_0000026
+complementation	#ESO_0000026
+altered gene expression / gene regulation	#ESO_0000004
+mutation	#ESO_0000003
