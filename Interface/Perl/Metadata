@@ -126,16 +126,13 @@ sub Distributions {
    #    # some behavior for Data Slice Y
    #}
 
-my $query = "PREFIX sio: <http://semanticscience.org/resource/>
+my $query = "
+        PREFIX phio: <http://linkeddata.systems/ontologies/SemanticPHIBase#>
         PREFIX phi: <http://linkeddata.systems/SemanticPHIBase/Resource/interaction/>
-        PREFIX edam: <http://edamontology.org/>
-        PREFIX eunis: <http://eunis.eea.europa.eu/rdf/species-schema.rdf#>
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-
-        SELECT ?val
+        SELECT ?val FROM <http://linkeddata.systems/SemanticPHIBase/Metadata>
         WHERE {
-               	phi:$ID <http://linkeddata.systems/SemanticPHIBase/Resource#has_unique_identifier> ?o .
-                ?o <http://linkeddata.systems/SemanticPHIBase/Resource#has_value> ?val  }";
+               	phi:$ID phio:has_unique_identifier ?o .
+                ?o  phio:has_value ?val  }";
 
 
 	use RDF::Query::Client;
@@ -144,6 +141,7 @@ my $query = "PREFIX sio: <http://semanticscience.org/resource/>
 	my $row = $iterator->next; 
 	my $accnumber = $row->{val}->literal_value;
 
+# make the links to teh text and RDF versions of this record
    $formats{'text/html'} = "http://www.phi-base.org/query.php?detail=yes&phi_acc=$accnumber";
    $formats{'application/rdf+xml'} = "http://linkeddata.systems/SemanticPHIBase/Resource/interaction/$ID";
 
@@ -151,7 +149,6 @@ my $query = "PREFIX sio: <http://semanticscience.org/resource/>
    $metadata{'rdf:type'} = ['phi:PHIBO_00022'];
 
    # and whatever other metadata you wish (also optional)
-
    my $metadata	= $self->getDistributionMetadata($accnumber);
 
    $response{distributions} = \%formats;
